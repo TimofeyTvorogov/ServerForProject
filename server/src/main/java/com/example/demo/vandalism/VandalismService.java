@@ -39,9 +39,12 @@ public class VandalismService {
 
     //ready
     public void deleteVandalism(Long vandalismId) {
-    boolean exists =  vandalismRepository.existsById(vandalismId);
-    if (!exists){
-        throw new IllegalStateException(String.format("vandalism with id %d does not exist",vandalismId));
+        boolean exists =  vandalismRepository.existsById(vandalismId);
+        if (!exists){
+            throw new IllegalStateException(String.format("vandalism with id %d does not exist",vandalismId));
+        }
+        else {
+            vandalismRepository.deleteById(vandalismId);
         }
     }
     //Todo позаменять параметры функций
