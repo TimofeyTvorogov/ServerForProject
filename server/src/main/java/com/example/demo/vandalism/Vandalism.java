@@ -32,33 +32,29 @@ public class Vandalism {
                      Double lon,
                      String address,
                      String type,
-                     String object,
-                     Long votes,
-                     Boolean isCleaned) {
+                     String object) {
         this.id = id;
         this.lat = lat;
         this.lon = lon;
         this.address = address;
         this.type = type;
         this.object = object;
-        this.votes = votes;
-        this.isCleaned = isCleaned;
+        this.votes = 0L;
+        this.isCleaned = false;
     }
 
     public Vandalism(Double lat,
                      Double lon,
                      String address,
                      String type,
-                     String object,
-                     Long votes,
-                     Boolean isCleaned) {
+                     String object) {
         this.lat = lat;
         this.lon = lon;
         this.address = address;
         this.type = type;
         this.object = object;
-        this.votes = votes;
-        this.isCleaned = isCleaned;
+        this.votes = 0L;
+        this.isCleaned = false;
 
     }
     public Vandalism(){}
