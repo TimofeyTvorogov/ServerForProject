@@ -1,6 +1,6 @@
 package com.example.demo.vandalism;
 
-
+// TODO: 15.08.2022 add images serving 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -47,7 +47,7 @@ public class VandalismService {
             vandalismRepository.deleteById(vandalismId);
         }
     }
-    //Todo add votes
+    
 
     @Transactional
     public void updateVandalism(Long vandalismId,
@@ -79,12 +79,12 @@ public class VandalismService {
         }
         if (lon!=null){
 
-            Optional<Vandalism> vandalismOptional = vandalismRepository.findVandalismByLatLon(lon,vandalism.getLon());
+            Optional<Vandalism> vandalismOptional = vandalismRepository.findVandalismByLatLon(vandalism.getLat(),lon);
             if (vandalismOptional.isPresent()){
                 throw new IllegalStateException("coords already taken");
             }
             else {
-                vandalism.setLat(lon);
+                vandalism.setLon(lon);
 
             }
 

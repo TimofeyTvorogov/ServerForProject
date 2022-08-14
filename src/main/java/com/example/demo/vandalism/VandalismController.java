@@ -37,7 +37,7 @@ public class VandalismController {
     }
 
 
-    //todo переделать метод upgrade
+
     @PutMapping(path = "{vandalismId}")
     public void putVandalism(
             @PathVariable("vandalismId") Long vandalismId,
