@@ -64,19 +64,7 @@ public class VandalismService {
         if (address!=null && address.length()>0&&!address.equals(vandalism.getAddress())){
             vandalism.setAddress(address);
         }
-//todo переписать логику на каждый параметр отдельно
-        /*if (lat!=null || lon!=null){
 
-           Optional<Vandalism> vandalismOptional = vandalismRepository.findVandalismByLatLon(lat,lon);
-           if (vandalismOptional.isPresent()){
-               throw new IllegalStateException("coords already taken");
-           }
-           else {
-               vandalism.setLat(lat);
-               vandalism.setLon(lon);
-           }
-
-        }*/
         if (lat!=null){
 
             Optional<Vandalism> vandalismOptional = vandalismRepository.findVandalismByLatLon(lat,vandalism.getLon());
