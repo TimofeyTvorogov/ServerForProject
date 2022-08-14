@@ -46,8 +46,9 @@ public class VandalismController {
             @RequestParam(required = false) String address,
             @RequestParam(required = false) String type,
             @RequestParam(required = false) String object,
+            @RequestParam(required = false) Long votes,
             @RequestParam(required = false) Boolean cleaned) {
 
-vandalismService.updateVandalism(vandalismId,lat,lon,address,type,object,cleaned);
+vandalismService.updateVandalism(vandalismId,lat,lon,address,type,object,votes,cleaned);
     }
 }

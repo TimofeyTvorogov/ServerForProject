@@ -47,8 +47,7 @@ public class VandalismService {
             vandalismRepository.deleteById(vandalismId);
         }
     }
-    //Todo позаменять параметры функций
-    //todo поменять логику чем апдейтить
+    //Todo add votes
 
     @Transactional
     public void updateVandalism(Long vandalismId,
@@ -57,6 +56,7 @@ public class VandalismService {
                                 String address,
                                 String type,
                                 String object,
+                                Long votes,
                                 Boolean cleaned){
         Vandalism vandalism = vandalismRepository.findById(vandalismId)
                 .orElseThrow(()-> new IllegalStateException(String.format(
@@ -64,8 +64,8 @@ public class VandalismService {
         if (address!=null && address.length()>0&&!address.equals(vandalism.getAddress())){
             vandalism.setAddress(address);
         }
-
-        if (lat!=null && lon!=null){
+//todo переписать логику на каждый параметр отдельно
+        /*if (lat!=null || lon!=null){
 
            Optional<Vandalism> vandalismOptional = vandalismRepository.findVandalismByLatLon(lat,lon);
            if (vandalismOptional.isPresent()){
@@ -76,7 +76,32 @@ public class VandalismService {
                vandalism.setLon(lon);
            }
 
+        }*/
+        if (lat!=null){
+
+            Optional<Vandalism> vandalismOptional = vandalismRepository.findVandalismByLatLon(lat,vandalism.getLon());
+            if (vandalismOptional.isPresent()){
+                throw new IllegalStateException("coords already taken");
+            }
+            else {
+                vandalism.setLat(lat);
+
+            }
+
         }
+        if (lon!=null){
+
+            Optional<Vandalism> vandalismOptional = vandalismRepository.findVandalismByLatLon(lon,vandalism.getLon());
+            if (vandalismOptional.isPresent()){
+                throw new IllegalStateException("coords already taken");
+            }
+            else {
+                vandalism.setLat(lon);
+
+            }
+
+        }
+
 
         if (type!=null && type.length()>0&&!type.equals(vandalism.getType())){
         vandalism.setType(type);
@@ -86,6 +111,9 @@ public class VandalismService {
         }
         if(cleaned!=null&&!cleaned.equals(vandalism.getCleaned())){
             vandalism.setCleaned(cleaned);
+        }
+        if (votes!=null&&!votes.equals(vandalism.getVotes())){
+            vandalism.setVotes(votes);
         }
 
     }

@@ -6,20 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="eba39e77-571e-4539-b8e1-82b08a0747ac" name="Changes" comment="full rest has been completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/demo/ClientServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/demo/vandalism/Vandalism.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/demo/vandalism/VandalismConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/demo/vandalism/VandalismController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/demo/vandalism/VandalismRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/demo/vandalism/VandalismService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/test/java/com/project/tt/demo/ClientServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,21 +25,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2BpnhC4r6Bv68PiWpq8iW3Mw0ym" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\IdeaProjects\demo\src\main\java\com\project\tt\demo\student" />
@@ -59,7 +56,7 @@
   <component name="RunManager">
     <configuration name="ClientServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo.ClientServerApplication" />
-      <module name="ServerForProject" />
+      <module name="demo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.demo.*" />
@@ -119,7 +116,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
