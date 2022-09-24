@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eba39e77-571e-4539-b8e1-82b08a0747ac" name="Changes" comment="full rest has been completed">
+    <list default="true" id="eba39e77-571e-4539-b8e1-82b08a0747ac" name="Changes" comment="another stupid fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismService.java" afterDir="false" />
     </list>
@@ -23,7 +22,9 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -103,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659284796178</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="another stupid fix">
+      <created>1660494276783</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660494276783</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +132,7 @@
     <MESSAGE value="vandalism server" />
     <MESSAGE value="minor update" />
     <MESSAGE value="full rest has been completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="full rest has been completed" />
+    <MESSAGE value="another stupid fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="another stupid fix" />
   </component>
 </project>

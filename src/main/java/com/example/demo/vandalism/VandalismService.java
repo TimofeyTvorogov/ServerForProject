@@ -5,13 +5,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.SequenceGenerator;
+import java.io.*;
+import java.nio.file.Files;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class VandalismService {
-
+    @SequenceGenerator(
+            name ="vandalism_sequence",
+            sequenceName = "vandalism_sequence",
+            allocationSize = 1)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "vandalism_generator")
+    Long id;
     private final VandalismRepository vandalismRepository;
 
     //ready
@@ -34,6 +47,8 @@ public class VandalismService {
         if (vandalismOptional.isPresent()){
             throw new IllegalStateException("already exists");
         }
+
+
        vandalismRepository.save(vandalism);
     }
 
@@ -103,6 +118,28 @@ public class VandalismService {
         if (votes!=null&&!votes.equals(vandalism.getVotes())){
             vandalism.setVotes(votes);
         }
+
+    }
+
+    public void addImage(MultipartFile image) {
+
+        File destFile = new File("C:/Users/user/Desktop/Тимофей проект/"+id+".jpg");
+        if (image.isEmpty()) {
+            return;
+        }
+
+        try {
+            byte[] bytes = image.getBytes();
+            BufferedOutputStream stream =
+                new BufferedOutputStream(new FileOutputStream(destFile));
+            stream.write(bytes);
+            stream.close();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
 
     }
 }
