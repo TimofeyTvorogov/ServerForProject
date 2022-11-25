@@ -24,6 +24,8 @@ public class Vandalism {
     private String type;
     private String object;
     private Long votes;
+
+    private String imageName;
     private Boolean cleaned;
 
 
@@ -34,6 +36,7 @@ public class Vandalism {
                      String type,
                      String object,
                      Long votes,
+                     String imageName,
                      Boolean cleaned) {
         this.id = id;
         this.lat = lat;
@@ -42,8 +45,10 @@ public class Vandalism {
         this.type = type;
         this.object = object;
         this.votes = votes;
+        this.imageName = imageName;
         this.cleaned = cleaned;
     }
+
 
     public Vandalism(Double lat,
                      Double lon,
@@ -51,6 +56,7 @@ public class Vandalism {
                      String type,
                      String object,
                      Long votes,
+                     String imageName,
                      Boolean cleaned) {
         this.lat = lat;
         this.lon = lon;
@@ -58,6 +64,7 @@ public class Vandalism {
         this.type = type;
         this.object = object;
         this.votes = votes;
+        this.imageName = imageName;
         this.cleaned = cleaned;
 
     }
@@ -121,6 +128,13 @@ public class Vandalism {
 
     public Boolean getCleaned(){return cleaned;}
     public void setCleaned(Boolean cleaned){this.cleaned = cleaned;}
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
 
 }
 

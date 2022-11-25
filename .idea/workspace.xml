@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="eba39e77-571e-4539-b8e1-82b08a0747ac" name="Changes" comment="another stupid fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/Vandalism.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/Vandalism.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/vandalism/VandalismService.java" afterDir="false" />
     </list>
@@ -46,7 +49,8 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/ServerForProject&quot;
   }
 }</component>
   <component name="RecentsManager">

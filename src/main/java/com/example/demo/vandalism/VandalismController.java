@@ -21,19 +21,21 @@ public class VandalismController {
     private final VandalismService vandalismService;
 
 
-    @GetMapping(path = "{vandalismId}", produces = MediaType.IMAGE_JPEG_VALUE)
-    public void getImage(@PathVariable("vandalismId") Long vandalismId, HttpServletResponse response) throws IOException {
+    @GetMapping(path = "{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+    public void getImage(@PathVariable("imageName") String imageName, HttpServletResponse response) throws IOException {
 
-        FileSystemResource imgFile = new FileSystemResource("C:/Users/user/Desktop/Тимофей проект/"+vandalismId+".jpg");
+        FileSystemResource imgFile = new FileSystemResource("C:/Users/user/Desktop/Тимофей проект/"+imageName );
 
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
         StreamUtils.copy(imgFile.getInputStream(), response.getOutputStream());
 
     }
 
-    @PostMapping(path = "/postImage")
-    public void postImage(@RequestBody MultipartFile file){
-        vandalismService.addImage(file);
+    @PostMapping(value = "/postImage/{name}")
+    public void postImage(@PathVariable("name") String fileName, @RequestPart("file") MultipartFile file){
+
+        vandalismService.addImage(fileName,file);
+
     }
 
 
@@ -72,8 +74,9 @@ public class VandalismController {
             @RequestParam(required = false) String type,
             @RequestParam(required = false) String object,
             @RequestParam(required = false) Long votes,
+            @RequestParam(required = false) String imageName,
             @RequestParam(required = false) Boolean cleaned) {
 
-    vandalismService.updateVandalism(vandalismId,lat,lon,address,type,object,votes,cleaned);
+    vandalismService.updateVandalism(vandalismId,lat,lon,address,type,object,votes,imageName,cleaned);
     }
 }

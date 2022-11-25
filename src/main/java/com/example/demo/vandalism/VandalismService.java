@@ -17,14 +17,7 @@ import java.util.Optional;
 
 @Service
 public class VandalismService {
-    @SequenceGenerator(
-            name ="vandalism_sequence",
-            sequenceName = "vandalism_sequence",
-            allocationSize = 1)
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "vandalism_generator")
-    Long id;
+
     private final VandalismRepository vandalismRepository;
 
     //ready
@@ -72,6 +65,7 @@ public class VandalismService {
                                 String type,
                                 String object,
                                 Long votes,
+                                String imageName,
                                 Boolean cleaned){
         Vandalism vandalism = vandalismRepository.findById(vandalismId)
                 .orElseThrow(()-> new IllegalStateException(String.format(
@@ -118,14 +112,16 @@ public class VandalismService {
         if (votes!=null&&!votes.equals(vandalism.getVotes())){
             vandalism.setVotes(votes);
         }
+        if (imageName!=null && imageName.length()>0&&!imageName.equals(vandalism.getImageName())){
+            vandalism.setImageName(imageName);
+        }
 
     }
 
-    public void addImage(MultipartFile image) {
-
-        File destFile = new File("C:/Users/user/Desktop/Тимофей проект/"+id+".jpg");
+    public void addImage(String imageName, MultipartFile image) {
+        File destFile = new File("C:/Users/user/Desktop/Тимофей проект/"+imageName);
         if (image.isEmpty()) {
-            return;
+            throw new IllegalStateException("изображение пустое");
         }
 
         try {

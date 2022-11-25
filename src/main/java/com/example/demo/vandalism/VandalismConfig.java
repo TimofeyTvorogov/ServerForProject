@@ -4,13 +4,19 @@ package com.example.demo.vandalism;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
 public class VandalismConfig {
+    @Bean(name = "multipartResolver")
+    public CommonsMultipartResolver multipartResolver() {
+        CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
 
+        return multipartResolver;
+    }
 @Bean
 CommandLineRunner commandLineRunner(VandalismRepository repository){
 
