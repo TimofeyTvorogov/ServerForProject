@@ -119,7 +119,7 @@ public class VandalismService {
     }
 
     public void addImage(String imageName, MultipartFile image) {
-        File destFile = new File("C:/Users/user/Desktop/Тимофей проект/"+imageName);
+        File destFile = new File("C:/Users/user/Desktop/project/"+imageName);
         if (image.isEmpty()) {
             throw new IllegalStateException("изображение пустое");
         }

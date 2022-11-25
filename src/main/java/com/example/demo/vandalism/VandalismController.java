@@ -24,7 +24,7 @@ public class VandalismController {
     @GetMapping(path = "{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
     public void getImage(@PathVariable("imageName") String imageName, HttpServletResponse response) throws IOException {
 
-        FileSystemResource imgFile = new FileSystemResource("C:/Users/user/Desktop/Тимофей проект/"+imageName );
+        FileSystemResource imgFile = new FileSystemResource("C:/Users/user/Desktop/project/"+imageName );
 
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
         StreamUtils.copy(imgFile.getInputStream(), response.getOutputStream());
